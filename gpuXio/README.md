@@ -1,4 +1,4 @@
-# gpuXio
+# gpu-io
 
 **A GPU-accelerated computing library for running physics simulations on the web**
 
