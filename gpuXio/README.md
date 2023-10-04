@@ -1,5 +1,8 @@
 # gpuio
 
+![imgonline-com-ua-twotoone-KlvUyE2DLZuNy](https://github.com/Malav5372/gpuio/assets/144440737/1086c2d3-e43f-45ec-9c19-4810c505afa9)
+
+
 GPUIO represents an advanced research project in the realms of computer graphics and GPU computing, specializing in physics simulations. It harnesses the capabilities of modern GPUs, supporting WebGL 1/2 and GLSL 1/3, and offers five simulation types:
 
 1. Grid-Based Simulation: Explores dynamic patterns, including Reaction Diffusion.
