@@ -1,4 +1,4 @@
-# gpu-io
+# gpuio
 
 GPUIO represents an advanced research project in the realms of computer graphics and GPU computing, specializing in physics simulations. It harnesses the capabilities of modern GPUs, supporting WebGL 1/2 and GLSL 1/3, and offers five simulation types:
 
