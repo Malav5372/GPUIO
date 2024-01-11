@@ -1,6 +1,6 @@
 # gpuio
 
-GPUIO is a project in the domain of computer graphics and GPU computing, specializing in physics simulations. It harnesses the capabilities of modern GPUs, supporting WebGL 1/2 and GLSL 1/3, and offers five simulation types:
+GPUIO is a project in the domain of computer graphics and GPU computing, specializing in physics simulations. It harnesses the capabilities of modern GPUs, supporting WebGL 1/2 and GLSL 1/3, and offers the following simulation types:
 
 1. Grid-Based Simulation: Explores dynamic patterns, including Reaction Diffusion.
 
