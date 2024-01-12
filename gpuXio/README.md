@@ -14,12 +14,6 @@ GPUIO is a project in the domain of computer graphics and GPU computing, special
 
 6. Julia Set Fractal: Creates intricate fractal art using complex mathematics.
 
-**A GPU-accelerated computing library for running physics simulations on the web**
-
-gpu-io is a WebGL library that helps you easily compose GPU-accelerated computing workflows.  This library can be used for a variety of applications including real-time physics simulations, particle/agent-based simulations, cellular automata, image processing, and general purpose GPU computations.  gpu-io supports rendering directly to the WebGL canvas and has some built-in features that make interactivity easy.  See Examples for more details.
-
-Designed for WebGL 2.0 (if available), with fallbacks to support WebGL 1.0 - so it should run on practically any mobile or older browsers.  WebGPU support is planned in the future.
-
 
 ### Motivation
 
