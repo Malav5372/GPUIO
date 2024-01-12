@@ -85,19 +85,6 @@ https://github.com/Malav5372/gpu-io/assets/144440737/6fa26e4c-d6c1-49ad-b3d3-719
 https://github.com/Malav5372/gpu-io/assets/144440737/1744422a-e428-4399-b88c-9b7ea6bf6ac9
 
 
-## Installation
-
-### Install via npm
-
-`npm install gpu-io`
-
-And import into your project:
-
-```js
-import { GPUComposer, GPULayer, GPUProgram } from 'gpu-io';
-```
-
-
 ### Import into HTML
 
 *OR* you can add gpu-io.js or gpu-io.min.js to your html directly:
