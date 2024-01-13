@@ -106,7 +106,7 @@ const { GPUComposer, GPULayer, GPUProgram } = GPUIO;
 ```
 
 
-## Use
+### Use
 
 A simple example of how to use gpu-io to simulate 2D diffusion:
 
@@ -215,7 +215,7 @@ loop(); // Start animation loop.
 b
 
 
-## Examples
+### Examples
 
 Check out the Examples page to really understand how gpu-io works and how to easily create touch interactions in your application.
 Source code for all examples can be found in the examples folder.
@@ -223,14 +223,14 @@ Source code for all examples can be found in the examples folder.
 Please let me know if you made something with gpu-io!  Feel free to also post a link in the Show and Tell discussions thread.  I'll periodically add some of these to the Examples page as well.
 
 
-## API
+### API
 
 Full API documentation can be found in the docs folder.
 
 More information about writing GLSL shaders for gpu-io can be found at docs/GLSL
 
 
-## Compatibility with Threejs
+### Compatibility with Threejs
 
 gpu-io can share a webgl context with Threejs so that both libraries will be able to access shared memory on the gpu:
 
@@ -299,7 +299,7 @@ loop() {
 More info about using gpu-io with Threejs can be found in the Threejs Example
 
 
-## Limitations/Notes
+### Limitations/Notes
 
 
 ### Limitations
@@ -365,7 +365,7 @@ See docs>GPUComposer>constructor for more information.
 gpu-io will automatically convert any GLSL3 shaders to GLSL1 when targeting WebGL1.  If supporting WebGL1/GLSL1 is important to you, see the GLSL1 Support doc for more info about what functions/types/operators are available in gpu-io's flavor of GLSL1.
 
 
-## Acknowledgements
+### Acknowledgements
 
 I used a few codebases as reference when writing this, thanks to their authors for making these repos available:
 
