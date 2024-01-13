@@ -336,7 +336,6 @@ void main() {
 }
 ```
 
-
 ### GLSL Version
 
 gpu-io defaults to using WebGL2 (if available) with GLSL version 300 (GLSL3) but you can set it to use WebGL1 or GLSL version 100 (GLSL1) by passing `contextID` or `glslVersion` parameters to `GPUComposer`:
@@ -366,79 +365,6 @@ See docs>GPUComposer>constructor for more information.
 gpu-io will automatically convert any GLSL3 shaders to GLSL1 when targeting WebGL1.  If supporting WebGL1/GLSL1 is important to you, see the GLSL1 Support doc for more info about what functions/types/operators are available in gpu-io's flavor of GLSL1.
 
 
-### Transform Feedback
-
-You might notice that gpu-io does not use any transform feedback to handle computations on GPULayers.  Transform feedback is great for things like particle simulations and other types of physics that is computed on the vertex level as opposed to the pixel level.  It is still absolutely possible to perform these types of simulations using gpu-io see Examples, but currently all the computation happens in a fragment shader.  There are a few reasons for this:
-
-- The main use case for gpu-io is to operate on 2D spatially-distributed state (i.e. fields) stored in textures using fragment shaders.  There is additional support for 1D arrays and lines/particles, but that is secondary functionality.
-- Transform feedback is only supported in WebGL2.  At the time I first started writing this in 2020, WebGL2 was not supported by mobile Safari.  Though that has changed recently, for now I'd like to support all functionality in gpu-io in WebGL1/GLSL1 as well.
-- The API is simpler if we constrain computations to the fragment shader only.
-
-My current plan is to wait for [WebGPU](https://web.dev/gpu/) to officially launch by default in some browsers, and then re-evaluate some of the design decisions made in gpu-io.  WebGL puts artificial constraints on the current API by forcing general-purpose computing to happen in a vertex and fragment shader rendering pipeline rather than a compute pipeline, so I'd like to get away from WebGL in the long term – and using transform feedback feels like a step backwards at this point.
-
-
-### Precision
-
-By default all shaders in gpu-io are inited with highp precision floats and ints, but they will fall back to mediump if highp is not available (this is the same convention used by Threejs).  More info in [src/glsl/common/precision.ts
-
-You can override these defaults by specifying `intPrecision` and `floatPrecision` in GPUComposer's constructor:
-```js
-import {
-  GPUComposer,
-  PRECISION_LOW_P,
-  PRECISION_MEDIUM_P,
-  PRECISION_HIGH_P,
-} from 'gpu-io';
-
-const composer = new GPUComposer({
-  canvas: document.getElementById('webgl-canvas'),
-  intPrecision: PRECISION_MEDIUM_P,
-  floatPrecision: PRECISION_MEDIUM_P,
-});
-```
-
-Of course, you can also always manually specify the precision of a particular variable in your shader code:
-
-```glsl
-in vec2 v_uv;
-
-// u_state is a BYTE array, so we can set its precision to lowp.
-uniform lowp isampler2D u_state;
-
-out vec4 out_result;
-
-void main() {
-  lowp int state = texture(u_state, v_uv).r;
-  ....
-}
-```
-
-**Note: even if highp is specified in your shader code, gpu-io will convert to mediump if the current browser does not support highp (the alternative would be to throw an error).**
-
-I've also included the following helper functions to test the precision of mediump on your device and determine whether highp is supported:
-
-```js
-import {
-  isHighpSupportedInVertexShader,
-  isHighpSupportedInFragmentShader,
-  getVertexShaderMediumpPrecision,
-  getFragmentShaderMediumpPrecision,
-} from 'gpu-io';
-
-// Prints 'highp' or 'mediump' depending on returned precision of
-// mediump (16+bit or 32+bit).
-// On many devices (esp desktop) mediump defaults to 32bit.
-// See https://webglfundamentals.org/webgl/lessons/webgl-precision-issues.html
-// for more info.
-console.log(getVertexShaderMediumpPrecision());
-console.log(getFragmentShaderMediumpPrecision());
-
-// Print true or false depending on highp support of browser/device.
-console.log(isHighpSupportedInVertexShader());
-console.log(isHighpSupportedInFragmentShader());
-```
-
-
 ## Acknowledgements
 
 I used a few codebases as reference when writing this, thanks to their authors for making these repos available:
@@ -453,11 +379,6 @@ Other resources:
 
 - [WebGL best practices](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices) by Mozilla
 - [Compatibility issues in Shadertoy / webGLSL](https://shadertoyunofficial.wordpress.com/2016/07/22/compatibility-issues-in-shadertoy-webglsl/) Shadertoy – Unofficial
-
-
-## Development
-
-Pull requests welcome! I hope this library is useful to others, but I also realize that I have some very specific needs that have influenced the direction of this code – so we'll see what happens. Please let me know if you end up using this, I'd love to see what you're making!  
 
 
 ### Compiling with Webpack
