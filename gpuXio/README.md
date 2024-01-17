@@ -2,15 +2,11 @@
 
 GPUIO is a project in the domain of computer graphics and GPU computing, specializing in physics simulations. It harnesses the capabilities of modern GPUs, supporting WebGL 1/2 and GLSL 1/3, and offers the following simulation types:
 
-1. Grid-Based Simulation: Explores dynamic patterns, including Reaction Diffusion.
+1. 2D Wave Equation Simulation: Analyzes wave propagation in a 2D space.
 
-2. Particle + Grid Simulations: Combines particles and grids for intricate simulations, such as Net, Dots, Honeycomb, Fingerprints, and Fibers.
+2. Conway's Game of Life: Demonstrates emergent behavior through cellular automata.
 
-3. 2D Wave Equation Simulation: Analyzes wave propagation in a 2D space.
-
-4. Conway's Game of Life: Demonstrates emergent behavior through cellular automata.
-
-5. Julia Set Fractal: Creates intricate fractal art using complex mathematics.
+3. Julia Set Fractal: Creates intricate fractal art using complex mathematics.
 
 
 ### Motivation
