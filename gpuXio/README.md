@@ -6,13 +6,11 @@ GPUIO is a project in the domain of computer graphics and GPU computing, special
 
 2. Particle + Grid Simulations: Combines particles and grids for intricate simulations, such as Net, Dots, Honeycomb, Fingerprints, and Fibers.
 
-3. Fluid Simulation: Models realistic fluid dynamics with Fluid, Pressure, and Velocity simulations.
+3. 2D Wave Equation Simulation: Analyzes wave propagation in a 2D space.
 
-4. 2D Wave Equation Simulation: Analyzes wave propagation in a 2D space.
+4. Conway's Game of Life: Demonstrates emergent behavior through cellular automata.
 
-5. Conway's Game of Life: Demonstrates emergent behavior through cellular automata.
-
-6. Julia Set Fractal: Creates intricate fractal art using complex mathematics.
+5. Julia Set Fractal: Creates intricate fractal art using complex mathematics.
 
 
 ### Motivation
@@ -48,20 +46,6 @@ https://github.com/Malav5372/gpu-io/assets/144440737/7cf77865-582b-4682-938b-ee7
 #### Part-2: watch fibers in action 
    
 https://github.com/Malav5372/gpu-io/assets/144440737/96d0695e-9203-4e5a-9b1f-38901fe8820b
-
-### Fluid Simulation: This simulation solves the Navier-Stokes equations for incompressible fluids. The fluid visualization includes thousands of Lagrangian particles that follow the velocity field and leave behind semi-transparent trails as they move.
-
-### Watch Fluid Simulation in action:
-
-https://github.com/Malav5372/gpu-io/assets/144440737/117acf2d-0dfe-452a-8620-2757d6bdb99b
-
-### Watch Pressure Simulation in action:
-
-https://github.com/Malav5372/gpu-io/assets/144440737/68322057-0b29-4afc-b0f9-6168466a0871
-
-### Watch Watch velocity Simulation in action:
-
-https://github.com/Malav5372/gpu-io/assets/144440737/f15fe803-1bfe-4083-80ab-3c6bc2f3b21d
 
 
 ### 2D Wave Equation Simulation: simulates 2D wave equation and renders the resulting height field as a 3D mesh Additionally, it simulates realtime caustics formed by light shining through the 3D surface and renders the result as a texture (method described in more detail by Evan Wallace). All computations are performed in gpu-io and the results are passed to Threejs without ever leaving the GPU.
