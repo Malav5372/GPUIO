@@ -8,7 +8,6 @@ GPUIO is a project in the domain of computer graphics and GPU computing, special
 
 3. Julia Set Fractal: Creates intricate fractal art using complex mathematics.
 
-- [Installation](#installation)
 - [Use](#use)
 - [Examples](#examples)
 - [API](#api)
