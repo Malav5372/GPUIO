@@ -29,24 +29,6 @@ The main motivation behind gpu-io is to make it easier to compose GPU-accelerate
 - [License](#license)
 - [Development](#development)
 
-### Grid-Based Simulations : a reaction-diffusion system, where two virtual chemicals interact to create dynamic patterns. Similar systems were proposed by Alan Turing in 1952 as a mechanism for pattern formation in plants and animals. This reaction-diffusion system is particularly sensitive to two parameters: K (varies along x-axis) and F (varies along y-axis). You can interactively explore regions of K,F parameter space by zooming and panning across the screen.
-
-### Experience the Reaction Diffusions simulation's dynamics in this illuminating video :
-
-https://github.com/Malav5372/gpu-io/assets/144440737/b6f962eb-dc40-4d55-a563-27ed233df146
-
-### Particle + Grid Simulations: simulation of the network effects of a multicellular slime mold (Physarum polycephalum), based on a 2010 paper by Jeff Jones: "Characteristics of pattern formation and evolution in approximations of Physarum transport networks" and work by Sage Jenson. In this simulation, simple particle "agents" interact with an underlying field of chemical attractants to form complex, emergent behaviors.
-
-### Experience the Physarum Transport network simulation's dynamics in this illuminating video presentation :
-
-#### Part-1: Presenting Net, Dots, Honeycomb, Fingerprints, and Fibers simulation.
-
-https://github.com/Malav5372/gpu-io/assets/144440737/7cf77865-582b-4682-938b-ee7b2b98b5c0
-
-#### Part-2: watch fibers in action 
-   
-https://github.com/Malav5372/gpu-io/assets/144440737/96d0695e-9203-4e5a-9b1f-38901fe8820b
-
 
 ### 2D Wave Equation Simulation: simulates 2D wave equation and renders the resulting height field as a 3D mesh Additionally, it simulates realtime caustics formed by light shining through the 3D surface and renders the result as a texture (method described in more detail by Evan Wallace). All computations are performed in gpu-io and the results are passed to Threejs without ever leaving the GPU.
 
