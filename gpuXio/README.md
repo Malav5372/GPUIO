@@ -14,9 +14,6 @@ GPUIO is a project in the domain of computer graphics and GPU computing, special
 - [Compatibility with Threejs](#compatibility-with-threejs)
 - [Limitations/Notes](#limitationsnotes)
 - [Acknowledgements](#acknowledgements)
-- [License](#license)
-- [Development](#development)
-
 
 ### 2D Wave Equation Simulation: simulates 2D wave equation and renders the resulting height field as a 3D mesh Additionally, it simulates realtime caustics formed by light shining through the 3D surface and renders the result as a texture (method described in more detail by Evan Wallace). All computations are performed in gpu-io and the results are passed to Threejs without ever leaving the GPU.
 
