@@ -117,18 +117,5 @@ const composer2 = new GPUComposer({
 });
 ```
 
-### Acknowledgements
 
-we used a few codebases as reference when writing this, thanks to their authors for making these repos available:
-
-- [three.js](https://github.com/mrdoob/three.js/)
-- [regl](https://github.com/regl-project/regl)
-- [gpu.js](https://github.com/gpujs/gpu.js/)
-- [WebGL Boilerplate](https://webglfundamentals.org/webgl/lessons/webgl-boilerplate.html)
-- [GPU Accelerated Particles with WebGL 2](https://gpfault.net/posts/webgl2-particles.txt.html)
-
-Other resources:
-
-- [WebGL best practices](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices) by Mozilla
-- [Compatibility issues in Shadertoy / webGLSL](https://shadertoyunofficial.wordpress.com/2016/07/22/compatibility-issues-in-shadertoy-webglsl/) Shadertoy – Unofficial
 
